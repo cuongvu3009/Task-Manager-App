@@ -3,8 +3,8 @@ const router = express.Router();
 
 const {
   getAllTasks,
-  createTask,
   getSingleTask,
+  createTask,
   updateTask,
   deleteTask,
 } = require('../controllers/tasks');

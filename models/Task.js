@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const taskSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Name must be typed'],
+    required: [true, 'Name is required'],
+    maxlength: [20, 'Name can only last than 20 characters'],
     trim: true,
-    maxlength: [20, 'Maximum length is 20 characters'],
   },
   completed: {
     type: Boolean,
@@ -13,4 +13,4 @@ const taskSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('task', taskSchema);
+module.exports = mongoose.model('Task', taskSchema);
